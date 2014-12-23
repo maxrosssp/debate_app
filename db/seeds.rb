@@ -19,5 +19,5 @@ users.each do |user|
 end
 
 Micropost.create([{ content: 'I love stew.', user_id: User.find_by(name: 'Max').id},
-                  { content: 'Where do babies come from?', user_id: User.find_by(name: 'Marty')},
-                  { content: 'Halloween is the best.', user_id: User.find_by(name: 'Jan')}])
+                  { content: 'Where do babies come from?', user_id: User.find_by(name: 'Marty').id},
+                  { content: 'Halloween is the best.', user_id: User.find_by(name: 'Jan').id}])
