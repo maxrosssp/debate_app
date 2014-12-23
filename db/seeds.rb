@@ -17,3 +17,7 @@ users = [{ name: 'Marty', email: 'marty@aol.com' },
 users.each do |user|
   User.create(user)
 end
+
+Micropost.create([{ content: 'I love stew.', user_id: User.find_by(name: 'Max').id},
+                  { content: 'Where do babies come from?', user_id: User.find_by(name: 'Marty')},
+                  { content: 'Halloween is the best.', user_id: User.find_by(name: 'Jan')}])
